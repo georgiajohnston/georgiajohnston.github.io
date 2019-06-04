@@ -1,0 +1,1 @@
+console.log("basic rect js is called");
