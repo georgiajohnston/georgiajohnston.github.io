@@ -9,8 +9,8 @@ objectSet.push(objectOne);
 var rectangle = new Button("Rectangle", 25, 50, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][10], canvas, Rectangle, colArray[2][10]);
 var ellipse = new Button("Ellipse", 25, 140, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][10], canvas, Ellipse, colArray[2][10]);
 var circle = new Button("Circle", 25, 230, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][10], canvas, Circle, colArray[2][10]);
-var line = new Button("Line", 25, 320, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][0], canvas, Line, colArray[2][10]);
-var brush = new Button("Brush", 25, 410, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][0], canvas, Brush, colArray[2][10]);
+var line = new Button("Line", 25, 320, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][10], canvas, Line, colArray[2][10]);
+var brush = new Button("Brush", 25, 410, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][10], canvas, Brush, colArray[2][10]);
 var Undo = new Button("Undo", 25, 600, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][10], canvas, Rectangle, colArray[2][10]);
 var Reset = new Button("Reset", 25, 690, 80, 80, colArray[2][10], colArray[2][10], colArray[0][10], colArray[1][10], canvas, Rectangle, colArray[2][10]);
 objectSet.push(rectangle,ellipse,circle,line,brush, Undo, Reset);
@@ -26,14 +26,14 @@ var c22 = new Swatch(800,500,50,50,colArray[0][10],colArray[2][7],colArray[0][7]
 var c25 = new Swatch(800,560,50,50,colArray[0][10],colArray[2][8],colArray[0][8],canvas); var c26 = new Swatch(860,560,50,50,colArray[0][10],colArray[1][8],colArray[0][8],canvas); var c27 = new Swatch(920,560,50,50,colArray[0][10],colArray[0][8],colArray[0][8],canvas);
 var c28 = new Swatch(800,620,50,50,colArray[0][10],colArray[2][9],colArray[0][9],canvas); var c29 = new Swatch(860,620,50,50,colArray[0][10],colArray[1][9],colArray[0][9],canvas); var c30 = new Swatch(920,620,50,50,colArray[0][10],colArray[0][9],colArray[0][9],canvas);
 var c31 = new Swatch(800,680,50,50,colArray[0][10],colArray[2][10],colArray[0][10],canvas); var c32 = new Swatch(860,680,50,50,colArray[0][10],colArray[1][10],colArray[0][10],canvas); var c33 = new Swatch(920,680,50,50,colArray[0][10],colArray[0][10],colArray[0][10],canvas);
-
 objectSet.push(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,c30,c31,c32,c33);
 
-var w1 = new width_Button("1", 25, 500, 11, 10, 2, colArray[1][10], colArray[0][10], colArray[2][10], colArray[1][10], canvas);
-var w2 = new width_Button("2", 43, 500, 11, 10, 5, colArray[1][10], colArray[0][10], colArray[0][10], colArray[2][10], canvas);
-var w3 = new width_Button("3", 61, 500, 11, 10, 10, colArray[1][10], colArray[0][10], colArray[0][10], colArray[2][10], canvas);
-var w4 = new width_Button("4", 78, 500, 11, 10, 15, colArray[1][10], colArray[0][10], colArray[0][10], colArray[2][10], canvas);
-var w5 = new width_Button("5", 95, 500, 11, 10, 20, colArray[1][10], colArray[0][10], colArray[0][10], colArray[2][10], canvas);
+//text, x, y, w, h, width, radius, stroke, fill, textC, over, canvas
+var w1 = new width_Button("1", 25, 500, 11, 10, 2, 0, colArray[0][10], colArray[0][10], colArray[2][10], colArray[2][10], canvas);
+var w2 = new width_Button("2", 43, 500, 11, 10, 5, 0, colArray[0][10], colArray[0][10], colArray[2][10], colArray[2][10], canvas);
+var w3 = new width_Button("3", 61, 500, 11, 10, 10, 0, colArray[0][10], colArray[0][10], colArray[2][10], colArray[2][10], canvas);
+var w4 = new width_Button("4", 78, 500, 11, 10, 15, 0, colArray[0][10], colArray[0][10], colArray[2][10], colArray[2][10], canvas);
+var w5 = new width_Button("5", 95, 500, 11, 10, 20, 0, colArray[0][10], colArray[0][10], colArray[2][10], colArray[2][10], canvas);
 objectSet.push(w1, w2, w3, w4, w5);
 
 function animate(){

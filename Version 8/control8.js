@@ -50,7 +50,7 @@ class control_draw{
         this.rectBound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
             //console.log("mouse move event") 
             if(this.mouseDown == true && this.rectBound == true){
-                this.r = 10;
+                this.r = width_Button.selectedWidth;
                 if(Button.selectedShape == "Brush"){
                     var temp3 = new Brush(this.xMouse, this.yMouse, this.r, Swatch.selectedColour);
                     this.objectSet.push(temp3);
@@ -60,7 +60,8 @@ class control_draw{
 
         //colArray here changes colours of the rectangle 
         mUp(e){
-            if(this.mouseDown == true && this.rectBound){
+            if(this.mouseDown == true && this.rectBound == true){
+                this.dw = width_Button.selectedWidth;
             if (Button.selectedShape == "Rectangle"){
                 var tempO = new Rectangle(this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
                 this.objectSet.push(tempO);
@@ -71,10 +72,19 @@ class control_draw{
                 var temp1 = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                 this.objectSet.push(temp1);
             }else if(Button.selectedShape == "Line"){
-                var temp2 = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
+                var temp2 = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.dw, Swatch.selectedColour);
                 this.objectSet.push(temp2);
+            }else if(Button.selectedShape == "Square"){
+                var temp3 = new Square( this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
+                this.objectSet.push(temp3);
+            }else if(Button.selectedShape == "Diamond"){
+                var temp4 = new Diamond( this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
+                this.objectSet.push(temp4);
+            }else if (Button.selectedShape == "Rotate"){
+                var temp5 = new Rotate(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.dx, this.dy, Swatch.selectedColour);
+                this.objectSet.push(temp5);
+                }
             }
-}
         
         if (Button.selectedShape == "Reset"){
             this.objectSet = []; // clearing the object set
@@ -122,7 +132,7 @@ class control_draw{
         draw(){
 
             if(Button.selectedShape == "Line" || Button.selectedShape == "Rectangle" || Button.selectedShape == "Ellipse" || Button.selectedShape == "Circle"){
-                this.drawRect(this.xMouseStart, this.yMouseStart, this.dx, this.dy, colArray[0][4]);
+                this.drawRect(this.xMouseStart, this.yMouseStart, this.dx, this.dy, colArray[2][4]);
             }
         }
 

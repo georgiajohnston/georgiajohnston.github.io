@@ -86,12 +86,13 @@ Button.selected = "";
 Button.selectedShape = "";
 
 class width_Button{
-    constructor(text, x, y, w, h, width, stroke, fill, textC, over, canvas){
+    constructor(text, x, y, w, h, width, radius, stroke, fill, textC, over, canvas){
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
         this.width = width;
+        this.radius = radius;
         this.stroke = stroke;
         this.fill = fill;
         this.textC = textC;
@@ -115,8 +116,6 @@ class width_Button{
             
             width_Button.selected = this;
             width_Button.selectedWidth = this.width;
-
-
         }
     }
 
@@ -134,7 +133,7 @@ class width_Button{
 
     draw(){
         if(Button.selected == this ){
-            ctx.fillStyle = colArray[3][4];
+            ctx.fillStyle = colArray[2][4];
             
         }
         else if( this.rectBound ){
@@ -150,7 +149,6 @@ class width_Button{
         ctx.lineWidth = 5;
         ctx.fill();
         ctx.stroke();
-
     }
 
     writeText(){

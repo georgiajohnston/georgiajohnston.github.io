@@ -6,24 +6,470 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Please put title in every file</title>
     <style type="text/css">
-  
-    </style>
+        body{
+            background-color: whitesmoke;
+        }
+        </style>
 </head>
 <body>
- 
-    
-    <ul>
-            <li><a href ="Version 1/basic.html"> Version 1: </a></ah></li>
-            <li><a href ="Version 2/basic2.html"> Version 2: </a></ah></li>
-            <li><a href ="Version 3/basic3.html"> Version 3: </a></ah></li>
-            <li><a href ="Version 4/basic4.html"> Version 4: </a></ah></li>
-            <li><a href ="Version 5/basic5.html"> Version 5:</a></ah></li>
-            <li><a href ="Version 6/basic6.html"> Version 6:</a></ah></li>
-            <li><a href ="Version 7/basic7.html"> Version 7: </a></ah></li>
-            <li><a href ="Version 8/basic8.html"> Version 8: </a></ah></li>
-            <li><a href ="Version 9/basic9.html"> Version 9: </a></ah></li>
             
-        </ul>
+</style>  
+</head>
+<body>
+            <!--<h3><li><a href="rectangle/rectangle.html"> Rectangle set</a> verison one website</li></h3>-->
+<hr>
+<h1>Version 1: </h1>
+Click here for <a href ="Version 1/basic.html">Version 1 </a>
+<h3>Create a webpage with basic files connected to it</h3>
+<p> 
+    A new file in Version 1 will be created called basic.html. This file will connect to the <br>
+    other js files including basic.js, init.js, basicrect.js, control.js & main.js. For this <br>
+    first version I just want the files to be called on the console using console.log"file_name"<br>
+    to check they were correctly connected to the main file basic.html.
+</p>
+  
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 1/trelloPlanning.png"></div>
+<p>
+    Using the trello plan I was able to create a range of new files that connect. I checked <br> 
+    this by using a console log. The main file development was with the init.js file. In this <br>
+    file I outlined the canvas ratios to ensure that the program was able to run smoothely on <br>
+    multiple browsers as the screen would change height and width on different applications. I <br>
+    also implemented a colour array. This array did not contain a large range of colours and <br>
+    transparencies, simply the basic rainbow colours.  
+</p>
+
+<br>
+<h2>Website</h2>   
+<p>This shows the files console logs in the console of the webpage</p>       
+<div><img width="600" class="imgSizer" src="Version 1/consoleLogFiles.png"></div>
+
+
+<!--Break in Sprint-->
+
+<hr>
+<h1>Version 2: </h1>
+Click here for <a href ="Version 2/basic2.html">Version 2</a>
+<h3>Create a second canvas on the screen</h3>
+<p> 
+    A new rectangle will be created on the screen that the user will eventually be able to use <br>
+    as the drawing canvas. This rectangle will take up a large majority of the screen. This means <br>
+    that in the basicrect.js file a new function will be created for a rectangle. This rectangle <br>
+    will then be drawn in the main.js file with set x,y,w,h parameters.
+</p>
+
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 2/trelloPlanning.png"></div>
+<p>
+    Using the trello plan I was able to keep track of all my tasts and was able to create a <br> 
+    new rectangle function inside the basicrect.js file. This function was not very versatile <br>
+    so in order to continue using for future version I will need to update the function and <br> 
+    include more interchangable features. The rectangle is not being created in the main.js <br>
+    file and I have decided to use an object set to store ovjects created on the screen. This <br>
+    not only saves space and time, but it also allows me to later on edit the object set and <br>
+    give specific commands to it that will further develop the code for future updates and <br
+    >edits. This rectangle is very useful in ensuring the user does not draw all over the <br>
+    screen and is limited to a small section that we are able to control. 
+</p>
+
+<br>
+<h2>Website</h2>
+<p>This is the rectangle that the user will use as a drawing canvas</p>            
+<div><img width="600" class="imgSizer" src="Version 2/rectangleCanvas.png"></div>
+
+<!--Break in Sprint-->
+
+<hr>
+<h1>Version 3: </h1>
+Click here for <a href ="Version 3/basic3.html">Version 3 </a>
+<h3>Track and incorporate mouse activity</h3>
+<p> 
+    Introduce the idea of using mouse activity to determine if the user is inside the rectangle <br>
+    (second canvas). There is mouse up, mouse down, and mouse move. I will console log these so <br>
+    they appear in the console as the mouse is moving around the screen. I will also create the <br>
+    rectangle in the objectset so that the logged activity can be used for future boundary use <br>
+    in the next sprint.
+</p>
+
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 3/trelloPlanning.png"></div>
+<p>
+    Using this trello plan meant I was able to set up my application for future development. <br> 
+    Incorperating mouse activity into the code means I can track the users activity when using <br> 
+    the application. This means I can use this activity to make the game interactive. The main <br> 
+    idea being that the user can only draw when inside the second canvas and knowing the mouse <br>
+    activity can help when trying to determine if the user is within the boundaries set up in <br> 
+    the next sprint with true and false readings appearing in the console of the webpage.  
+</p>
+
+<br>
+<h2>Website</h2>
+<p>This shows the mouse activity on the screen</p>                   
+<div><img width="600" class="imgSizer" src="Version 3/mouse coordinates.png"></div>
+
+<br>
+<h2>Video</h2>
+<p>This shows the console log of mouse activity</p>
+<video width="600" controls>
+    <source src="Version 3/mouseCoordinates.mov" type="video/mp4">
+    </video>
+
+<!--Break in Sprint-->
+
+<hr>
+<h1>Version 4: </h1>
+Click here for <a href ="Version 4/basic4.html">Version 4 </a>
+<h3>Draw a shape only within the user canvas</h3>
+<p> 
+    Using the information gathered and progress from the previous sprints, get a rectangle to <br>
+    draw on the screen within the boundary. The rectangle will use all of the mouse activity, <br>
+    when the mouse goes down it will take the coordinates as a starting point. When the mouse <br>
+    moves the information and movement will determine the width and height of the rectangle, <br>
+    and when the mouse comes up, if it is in bounds it will draw a rectangle on the screen.
+</p>
+
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 4/trelloPlanning.png"></div>
+<p>
+    Using the trello plan I was not only able to keep track of the tasks I needed to do, but <br>
+    also track problems I needed to fix. One of which was not returning true false readings. <br> 
+    This was because I has drawn the rectangle in an external file (basicrect.js) without <br>
+    logging the parameters into the boundary check. To fix this I created the rectangle in <br>
+    the control.js file and entered the coordinates in as variables so they could be used <br>
+    again. This allows for future code development as I can change the width and height of <br>
+    the rectangle and it will still function as the coordinates are interchangable. The main <br>
+    function of true false is to determine if a rectangle will be drawn or not depending on <br>
+    the mouse being inside the second canvas. This is where the boundary was useful, it <br>
+    helped determine if a rectangle was to be drawn based on the mouse up, mouse down, <br>
+    and mouse move all returning true and being within the boundary. 
+
+</p>
+
+<br>
+<h2>Website</h2>
+<p>This shows the true & false readings and rectangles drawn in the canvas</p>
+<div><img width="600" class="imgSizer" src="Version 4/rectangle&boundary.png"></div>
+
+<br>
+<h2>Video</h2>
+<p>Mouse inside boundary console log check</p>
+<video width="600" controls>
+        <source src="Version 4/mouseBoundaryCheck.mov" type="video/mp4">
+        </video>
+
+<br>
+<h2>Video</h2>
+<p>Rectangle drawn inside canvas boundary check</p>
+<video width="600" controls>           
+        <source src="Version 4/rectangleInBoundary.mov" type="video/mp4">
+        </video>
+
+<!--Break in Sprint-->
+
+<hr>
+<h1>Version 5: </h1>
+Click here for <a href ="Version 5/basic5.html">Version 5</a>
+<h3>Create buttons that will change the colour of the shape drawn by the user</h3>
+<p> 
+    The rectangles drawn on the screen by the user can be coloured using the colour buttons. <br>
+    To do these colour buttons I will make a swatch function in the basic.js file. This function<br>
+    will target the rectangle and set the colour before the rectangle is initially drawn on the <br>
+    screen. This function allows the application to be more user friendly and enable the code to <br>
+    be further developed and change the colour of future shapes.
+</p>
+
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 5/trelloPlanning.png"></div>
+<p>
+    The purpose of this board is to ensure the application is adaptable when adding, removing <br> 
+    or editing existing code. The buttons created have a new function in the control.js file <br>
+    where they target the shape (in this sprint the only one created in the rectangle) and <br>
+    change the selected colour to the colour of the button. To make it easier for the user, <br>
+    I have made sure that the colour sent when drawing the rectangle is easy to see on the <br>
+    button. Because of this it doesn't require text on the button to tell the user the colour. <br>
+    This means instead of calling the function 'button', I called it 'swatch' to distinguish <br>
+    between the two. One of the problems I faced was about the button function, so I created <br>
+    swatch that has slightly different information. This fixed the problem and ensured that <br>
+    the rectangle could change colour simply when clicking on the button. There is also a <br>
+    default colour set so the program does not crash if the user has not selected a colour.
+</p>
+
+<br>
+<h2>Website</h2>
+<p>This shows the rectangles drawn on the screen in different colours</p>
+<div><img width="600" class="imgSizer" src="Version 5/colourChangingShape.png"></div>
+
+<br>
+<h2>Video</h2>
+<p>Drawing shapes with changing colour buttons</p>
+<video width="600" controls>
+        <source src="Version 5/colourChange.mov" type="video/mp4">
+        </video>
+
+<!--Break in Sprint-->
+
+<hr>
+<h1>Version 6: </h1>
+Click here for <a href ="Version 6/basic6.html">Version 6</a></li></ul>
+<h3>Adding new shapes in the application</h3>
+<p> 
+        This version incorporates other shapes to be drawn by the user. The new shape is an ellipse. <br>
+        This means a new function needs to be created in the basic.js, for the button. This function <br>
+        is slightly different to the swatch button as they both have different targets and purposes. <br>
+        The new shape will connect to the existing colour buttons and colour array so that doesn't <br>
+        need to be updated or edited to fit the changes made in this version. 
+</p>
+
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 6/trelloPlanning.png"></div>
+<p>
+    The purpose of this board is to introduce the idea of new shapes drawn by the user on the canvas. <br>
+    Starting with an ellipse, the basicrect.js file code is coppied over into a new file called shapes.js. <br>
+    This file will hold the functions for all of the future shapes drawn by the user. In that shapes.js file <br>
+    we add the code for a basic ellipse. This is also connected to all of the existing code in the control.js <br>
+    file so the user is able to draw using the mouse. The next step was the button class. This class was <br> 
+    created in the button.js file along with the swatch class. However it has text and when the button is <br>
+    clicked on, the text relates to the sahpe that will be drawn on the screen. One of the main problems <br>
+    with this sprint was not properly connecting the ellipse button to the control.js control class. Once <br>
+    I did this, the program ran smoothly and the user was able to switch between the two shapes easily <br>
+    once they clicked the right button.
+</p>
+
+<br>
+<h2>Website</h2>
+<p>Buttons and Colour Swatches</p>
+<div><img width="600" class="imgSizer" src="Version 6/shapesButtons.png"></div>
+
+<br>
+<h2>Video</h2>
+<p>Drawing on the screen using both shape buttons and colour swatches</p>
+<video width="600" controls>
+    <source src="Version 6/selectShape.mov" type="video/mp4">
+    </video>
+
+<br>
+<h2>Website</h2>
+<p>Drawing using both the shape buttons and swatched</p>
+<div><img width="600" class="imgSizer" src="Version 6/changeShapes.png"></div>
+
+<!--Break in Sprint-->
+
+<hr>
+<h1>Version 7: </h1>
+Click here for <a href ="Version 7/basic7.html">Version 7</a></li></ul>
+<h3>Adding Undo and Redo Buttons</h3>
+<p> 
+    This version incorperates new buttons that remove the last shape drawn (undo), or clear the <br>
+    canvas entirely (reset). The undo button, removes the most recent object from the object set, <br>
+    whereas reseting the canvas removes every object from the objectset so clearing it completely. <br>
+    The colour array was also updated in this version so it incorperates a wider range of colours <br>
+    and transparencies for the user to play with. 
+</p>
+
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 7/trelloPlanning.png"></div>
+<p>
+    This plan outlines the basic requirements of an undo and redo button in an interactive application. <br>
+    The main purpose is to undo a mistake that the user might have made while using the application. <br>
+    The undo buttons job is to remove the last item to enter the object set, or the last object drawn by <br>
+    the user. This function is found in the control.js file, there it says if the button has been selected, <br>
+    the last thing to enter the onject set should be removed therefore undoing the mose recent action. <br>
+    The reset button is simpler in the way that when it is selected, it clears the entire objectset. Having <br>
+    these buttons helps develop the code and further the interaction between the application and the <br>
+    user. The colour array has also been updated in this version, where a wider range of colours and <br>
+    transparencies has been used so the user has a larger choice of colour options. 
+</p>
+
+<br>
+<h2>Website</h2>
+<p>Undo and Redo Buttons</p>
+<div><img width="600" class="imgSizer" src="Version 7/undo&Redo.png"></div>
+
+<br>
+<h2>Video</h2>
+<p>Showing how the buttons work in the application</p>
+<video width="600" controls>
+        <source src="Version 7/undo&Redo.mov" type="video/mp4">
+        </video>
+
+<!--Break in Sprint-->
+
+<hr>
+<h1>Version 8: </h1>
+Click here for <a href ="Version 8/basic8.html">Version 8 </a>
+<h3>Adding new shapes as well as brush and specific features</h3>
+<p>
+    This version developes much further than the previous versions as it not only introduces two new <br>
+    shapes, circle and line, it also adds a brush as well as the option to change the width of the brush. <br>
+    Changing the width required a new button function in the button.js file but for the line and circle, <br>
+    their functions were added into the shapes.js file along with the already existing shapes.  
+</p>
+
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 8/trelloPlanning.png"></div>
+<p>
+    In this version, a few new shapes have been added, a circle and a line. The circle is different to <br> 
+    the ellipse because it will always be a perfect circle regardless of how the user draws it. The line <br>
+    however begins when the mouse goes down, and ends when the mouse comes up. The brush was <br>
+    slightly trickier to add in as it is fundamentally made up of many circles, one formes each time the <br>
+    mouse moves. This gives the brush its shape. Because the brush draws many circles, I decided it <br>
+    would be simple to add buttons that change the size of the brush by changing the radius value <br>
+    (making it smaller and larger). Doing this meant I needed to create a new width_Button class <br>
+    in the button.js file. This button works by changing the radius of the cirlces drawn when the <br>
+    brush is moving around the screen, producing a smaller brush.
+</p>
+
+<br>
+<h2>Website</h2>
+<p>Application with new shapes and brush with a selection of sizes</p>
+<div><img width="600" class="imgSizer" src="Version 8/website.png"></div>
+
+<br>
+<h2>Video</h2>
+<p>Drawing with the new shapes and trying out the new brush with changing widths</p>
+<video width="600" controls>
+        <source src="Version 8/brushWidth.mov" type="video/mp4">
+        </video>
+
+<!--Break in Sprint-->
+
+<hr>
+<h1>Version 9: </h1>
+Click here for <a href ="Version 9/basic9.html">Version 9</a>
+<h3>Final touches future proofing</h3>
+<p> 
+    This version focuses on cleaning up the code and future proofing it for future updates, edits or <br>
+    removals of code. I also worked on making the application more user friendly by improving the layout,<br>
+    size and colour or buttons and swatches on the application. Some of the future proofing included the <br>
+    implementation of loops for the swatches. This not only future proofs the code but makes it simpler to <br>
+    add nre colours to the colour array and ensure even spacing and placement between the existing colours. 
+</p>
+
+<br>
+<h2>Trello Planning</h2>
+<div><img width="600" class="imgSizer" src="Version 9/trelloPlanning.png"></div>
+<p>
+    Using the trello board, I was able to keep track of the updates and fixes that needed to be made <br>
+    to the application in order to future proof it. Some one the smaller fixes include setting default <br>
+    colours and sizes for shapes. The shapes rectangle, ellipse, square, rotate, circle and diamond all <br>
+    have the default colour set at black. In this version I have also included a new width selection for <br>
+    the line. This means that for brush and line, as you have to select a width as well as a colour, nothing <br>
+    will be drawn until they select one of those so there is no default colour or width. I have also moved <br>
+    and rearranged many of the buttons into a logical order, with undo and reset at the bottom smaller and <br>
+    out of the way yet still fitting with the colour theme and layout of the other buttons. The width buttons <br>
+    have also been moved to the right of the object they are affecting (line and brush) along the side next <br>
+    to the canvas. I also worked a lot on simplifying the swatches, both visually and in code. First darkening <br>
+    when the swatch is selected but also creating loops within the code so it only requires a small amount of <br>
+    code to do the same job without cluttering the main.js file. This future proofs the code for new colours <br>
+    and shapes that could be added later on without disrupting too much of the program and also makes it <br>
+    easier for the user to interact with. 
+</p>
+
+<br>
+<h2>Website</h2>
+<p>Final application</p>
+<div><img width="600" class="imgSizer" src="Version 9/line&Brush.png"></div>
+
+<br>
+<h2>Video</h2>
+<p>Final testing of brush and line functions</p>
+<video width="600" controls>
+        <source src="Version 9/line&Brush.mov" type="video/mp4">
+        </video>
+
+
+
+<hr>
+<hr>
+<h1>Relevant Implication & Trialing Decision Making </h1>
+<h3>Future Proofing</h3>
+<p> 
+    Future proofing is basically ensuring your program can be updated, edited or altered easilly <br>
+    without disrupting the running of the program. Some ways to future proof your application <br>
+    include implementing objects and functions. These are self-contained modular pieces of code <br>
+    that require a defined set of parameters in order to work. An example of this in my code is <br>
+    the mouse activity or the colour information collected from the swatches. Another example is <br>
+    using an objectset that updates, having this means that the objects can be managed from one <br>
+    single place. This would help an experienced programer to remove elements or possibly add <br>
+    new features. A way to help futureproof the webpage would be to heavily comment the code <br>
+    so others such as experienced programers can understand what parts control different <br>
+    functions. This means that the comments must be informative and very detailed when <br>
+    explaining the purpose of each section of code. 
+
+</p>
+
+<br>
+<h3>Functionality</h3>
+<p> 
+    The functionality of the program refers to how well it works, the speed it loads, ability to <br>
+    work on different browsers and if it is free of bugs. In my application I believe I have adressed <br>
+    these functionality tests. The first is using javascript, which has no graphics and allows the page <br>
+    to load very quickly. I have also tested on other browsers including google chrome and safari, comparing <br>
+    the loading performance of both I found that chrome was more compatible with my application. At every stage <br>
+    I have tested the applications performance and compared it to that on other browsers. If a problem arose in <br>
+    the coding, I would use console.log("") to help determine where the problem was occuring or check the connection <br> 
+    between different functions and objects. This was very useful when trouble shooting and trying to determine the <br>
+    error in the code. The mouse activity was also very useful when testing boundaries and returning true & false <br>
+    readings. To ensure the program was consistantly able to run smoothly, any new components that I wanted to add <br>
+    into the main application were first tested externally to check their compatability and to ensure that they <br>
+    would not create a bug or disrupt the code in any way. One of the main problems faced was when drawing a <br>
+    circle, a negative radius could be created, so after many tests we located the problem and decided to <br>
+    start using Math.abs. This helped fix the error and ensure that a negative radius would be accepted. <br>
+</p>
+
+<br>
+<h3>Trialing & Decisions</h3>
+<p> 
+    Trialing and testing were very important parts of the overall development and functionality of my overall <br>
+    application.The information gathered from these tests was very useful when determining things such as the <br>
+    colour themes and colourarray, transparency of colours, line widths and brush widths. Testing to see how <br>
+    these would work and appear on the application was important in ensuring that the end application was <br>
+    fully functional for the user and compatable withwhat the user would be looking for and how they would <br>
+    use the application. Trialing became a big factor when making decisions about where the application was <br>
+    heading. It gave an indication on how it was running and how compatable and functional it was using certain <br>
+    objects, functions, or browsers. This helped me make decisions such as which browser to use, what functions <br>
+    to have in place and how the objects would interact with the user and accessibility on the screen. Testing <br>
+    and trialing was very useful when determining simple things such as the brush and line width. Using testing <br>
+    helped me see which sizes would work best for the canvas size I had chosen earlier on. Decision such as the <br>
+    number and transparency of colours available to the user were also decided using trials to see how many would <br>
+    fit on the screen, their placement and how the worked with the other colours available. Also determining the <br>
+    colours that would be in the colour array, this was based less on trial and more on what users would like <br>
+    available, which is a wide range of colours and transparencies to play with on the canvas. The decision to <br>
+    have an undo and redo button was also important as it ensured the user would not have to reload the page, <br>
+    they were able to undo a mistake or clear the canvas if they wanted to begin again. These sorts of <br>
+    decisions were after trialing and testing, and the information discovered was very effective in <br>
+    helping develop a high qualty digital application.
+ </p>
+
+<br>
+<h3>Development</h3>
+<p> 
+    The overall development of the application followed the process of planning, testing, trialing. <br>
+    Using this process called the Agile process, I was able to develop the highest quality digital <br>
+    outcome through my application. This Agil process, was useful because it allowed certain stages <br>
+    such as the planning and development to happen at the same time, and created the cycle of plan - <br>
+    develop - test. Following this cycle, after about three sprints I was able to see how effective <br>
+    they were in maintaing clear goals that were achievable and keep me focused on specific tasks. <br>
+    Having these reasonable expectations set throughout the process helped me achieve more tasks than <br>
+    I originally thought as they were split into simple subtasks. Being able to see a highly simplified <br>
+    version of my application from the start allowed me to see the overall product potention and fully <br>
+    understand what I want to see from the application. This process also allowed me to follow the <br>
+    concept of prioritisation, completing the most important tasks first so I have the basics <br>
+    covered before beginning on the detailed steps. This became very helpful when staring the <br>
+    application as there were so many possibilities so being able to prioritise the things <br>
+    that needed to be completed was very useful in the overall development and quality of <br>
+    the application.
+
+</body>
+</html>
     
  
 </body>
